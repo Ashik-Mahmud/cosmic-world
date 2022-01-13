@@ -78,7 +78,21 @@ a{
     top: 5px;
     box-shadow: 0 2px #c31374;
 }
-
+.section-title{
+    text-align: center;
+    padding: 1rem 0rem;
+}
+ .section-title h1 {
+     position: relative;
+     color: #000;
+     font-size: 2rem;
+     margin: 1rem 0rem;
+     border-bottom: 2px solid var(--primary-color);
+     border-image: linear-gradient(45deg, #ff32a3, #ff51b1);
+     border-image-slice: 1;
+     border-image-outset: 5px 0px;
+     display: inline-block;
+ }
 
 /* ------------------------
 Overall Style Start Here 
@@ -149,4 +163,50 @@ Overall Style Start Here
     color: rgb(0, 0, 0);
    
 
+}
+
+
+/* features  */
+
+#features{
+    position: relative;
+    padding: 1rem 0rem;
+    padding-bottom: 3rem;
+
+}
+.feature-container .features-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    grid-column-gap: 2rem;
+    padding: 3rem 0rem;
+}
+.features-content .feature-box{
+    box-shadow: 14.1px 2.1px 10px rgba(0, 0, 0, 0.035),
+    113px 17px 80px rgba(0, 0, 0, 0.07);
+    position: relative;
+    padding: 2rem;
+    border-radius: 5px;
+    background: #fff;
+}
+.feature-box .feature__icon{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border: 1px solid var(--primary-color);
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: 30px;
+}
+.feature-box .feature__title{
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
+}
+
+.feature__btn{
+    margin: 1rem 0rem;
+    color: var(--primary-color);
+    cursor: pointer;
 }

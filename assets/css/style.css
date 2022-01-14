@@ -51,6 +51,7 @@ a{
     max-width: 1240px;
     margin: auto;
 }
+
 .img--fluid{
     max-width: 100%;
     height: auto;
@@ -144,6 +145,7 @@ Overall Style Start Here
     justify-content: space-between;
     position: relative;
     min-height: calc(80vh - 100px);
+    flex-wrap: wrap;
 }
 .hero-content .hero-text{
     width: 50%;
@@ -209,4 +211,231 @@ Overall Style Start Here
     margin: 1rem 0rem;
     color: var(--primary-color);
     cursor: pointer;
+}
+
+/*===========
+About part
+============*/
+
+#about{
+    position: relative;
+    background: #f5f5f7;
+    padding-top: 2rem;
+}
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.about-text{
+    width: 40%;
+    position: relative;
+}
+
+.about-text .about-text__title{
+    font-size: 2rem;
+    margin-bottom: .4em;
+}
+.about-text p.about-text__desc {
+    font-size: 1rem;
+    margin: .6rem 0rem;
+    line-height: 1.6;
+}
+.about-img {
+    width: 45%;
+}
+
+
+/*===========
+Gallery
+============*/
+#gallery{
+    padding: 3rem;
+}
+.gallery-content{
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    grid-gap: 1rem;
+    display: grid;
+    
+}
+
+.frame{
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: 5px solid #ff008c;
+    border-radius: 5px;
+    
+}
+.frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.frame .frame__icon{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.52);
+    display: grid;
+    place-items: center;
+    transition: all 0.2s ease-out;
+    transform: scale(0);
+}
+.frame:hover .frame__icon{
+    transform: scale(1);
+}
+.frame__icon i{
+    width: 60px;
+    height: 60px;
+    background-color: #ff008c;
+    font-size: 3rem;
+    color: #dddddd;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    line-height: 60px;
+}
+
+/*==========
+Contact 
+============*/
+
+#contact{
+    padding: 2rem 0rem;
+    background: #f5f5f7;
+}
+.contact-content{
+    padding: 3rem 0rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+.contact-text{
+    width: 40%;
+}
+.contact-text .contact-text__title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-text .contact-text__desc {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+.contact-text ul.list-of-social{
+    list-style: none;
+    position: relative;
+}
+.list-of-social li{
+    padding: .6rem 0rem;
+}
+.list-of-social a{
+    color: #ff008c;
+    display: flex;
+    align-items: center;
+}
+.list-of-social a i{
+    font-size: 1.5rem;
+    margin-right: .5rem;
+}
+
+.contact-form {
+    width: 40%;
+}
+form input,
+form textarea{
+    width: 100%;
+    padding: .7rem;
+    border-radius: 3px;
+    margin-bottom: .6rem;
+    outline: none;
+    border: 1px solid #ccc;
+    font-family: var(--montserrat);
+}
+.fields label{
+    margin-bottom: .5rem;
+    display: block;
+}
+button[type='submit']{
+    cursor: pointer;
+}
+
+/* footer  */
+
+#footer{
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* Responsive  */
+@media (max-width: 1240px) {
+    .container {
+        padding: 0rem 2rem;
+        max-width: 100%;
+    }
+
+    .gallery-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .hero-content .hero-text {
+        width: 100%;
+    }
+
+    .feature-container .features-content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 2rem;
+    }
+    .about-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .about-content .about-text,
+    .about-content .about-img{
+        width: 100%;
+    }
+
+    .contact-content{
+        flex-direction: column;
+    }
+    .contact-content .contact-text,
+    .contact-content .contact-form{
+        width: 100%;
+    }
+     .gallery-content {
+         grid-template-columns: repeat(2, 1fr);
+     }
+   .gallery-content .frame {
+       width: 100%;
+       height: auto;
+   }
+}
+
+@media (max-width: 600px) {
+      .gallery-content {
+          grid-template-columns: repeat(1, 1fr);
+      }
+      .gallery-content .frame{
+          width: 100%;
+          height: auto;
+      }
+       .feature-container .features-content {
+           grid-template-columns: repeat(1, 1fr);
+           grid-row-gap: 2rem;
+           justify-content: center;
+           align-items: center;
+       }
 }
